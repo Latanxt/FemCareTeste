@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('8.png');
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a tela */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 150vh; /* Ajusta a altura para a altura da tela */
+}
+
+.header {
+    background-color: #ffb3d9; /* Rosa pastel */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #ff99cc; /* Tom mais claro do rosa */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #ff80b3; /* Tom mais escuro ao passar o mouse */
+}
+
+h1 {
+    color: #6a0dad; /* Lilás */
+    margin: 0;
+    font-size: 46px;
+}
+
+.container {
+    max-width: 1200px; /* Aumenta a largura máxima para melhor responsividade */
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6a0dad; /* Lilás */
+    margin-bottom: 10px;
+}
+
+p, ul {
+    color: #555; /* Texto escuro para melhor legibilidade */
+}
+
+ul {
+    padding-left: 20px; /* Espaçamento para a lista */
+}
+
+li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.tips-container {
+    display: flex; /* Alinha os itens lado a lado */
+    justify-content: space-between; /* Espaço igual entre as listas */
+    margin: 20px 0; /* Margem para separar a seção das listas */
+    flex-wrap: wrap; /* Garante que as listas se ajustem em telas menores */
+}
+
+.tip-list {
+    flex: 1;
+    margin: 10px; /* Ajusta a margem para separar as listas */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip-list h2 {
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.tip-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tip-list li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.tip-list li i {
+    margin-right: 10px;
+}
+
+.icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.icon-container i {
+    font-size: 30px;
+    color: #6a0dad; /* Lilás */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.icon-container i:hover {
+    transform: scale(1.3); /* Efeito de zoom ao passar o mouse */
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fica na tela toda */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+    color: black;
+}
+
+.modal-content {
+    background-color: rgb(255, 254, 255);
+    margin: 15% auto; /* Margens automáticas para centralizar */
+    padding: 20px;
+    border: 1px solid #9d4da0;
+    width: 80%; /* Largura do modal */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right; /* Alinha à direita */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Altera a cor ao passar o mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tips-container {
+        flex-direction: column; /* Em telas menores, empilha as listas */
+        margin: 20px 0;
+    }
+
+    .tip-list {
+        flex: none; /* Remove a flexibilidade e faz as listas ocuparem a largura total */
+        margin: 10px 0; /* Ajusta a margem */
+    }
+
+    .icon-container {
+        bottom: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .back-button {
+        padding: 8px 12px;
+    }
+
+    .icon-container i {
+        font-size: 25px;
+        padding: 8px;
+    }
+}

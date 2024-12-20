@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum Livre</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <!-- Botão de Voltar -->
+    <a href="index.html" class="back-button">Voltar</a>
+
+    <!-- Container do Chat -->
+    <div class="chat-container">
+        <!-- Cabeçalho do Chat -->
+        <div class="chat-header">
+            <span>Fórum Livre</span>
+        </div>
+
+        <!-- Corpo do Chat -->
+        <div class="chat-body" id="chat-body">
+            <!-- Respostas do Chat -->
+            <div class="chat-response" id="chat-response"></div>
+
+            <!-- Caixa de Entrada e Envio -->
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
+                <button class="send-button" id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="forum.js"></script>
+</body>
+</html>
